@@ -55,33 +55,34 @@ A sphere consists of points with a given distance $R$ from a center
 $\mathbf{C}$, $(\mathbf{P} - \mathbf{C})^2 = R^2$.  Subsituting and solving for
 $\lambda$, we get:
 
-$$
+```math
 (\mathbf{P} - \mathbf{C})^2 = R^2\\
 (\lambda \mathbf{\hat{d}} + \mathbf{Q} - \mathbf{C})^2 = R^2
-$$
+```
 
 Define:
-$$
+
+```math
 \mathbf{\Delta} = \mathbf{C} - \mathbf{Q}
-$$
+```
 
 Then
 
-$$
+```math
 (\lambda \mathbf{\hat{d}} + \mathbf{Q} - \mathbf{C})^2 = R^2 \\
 (\lambda \mathbf{\hat{d}} - \mathbf{\Delta})^2 = R^2\\
 (\lambda \mathbf{\hat{d}} - \mathbf{\Delta}) \cdot (\lambda \mathbf{\hat{d}} - \mathbf{\Delta}) = R^2\\
 \mathbf{\hat{d}} \cdot \mathbf{\hat{d}} \lambda^2 - 2 \mathbf{\Delta} \cdot \mathbf{\hat{d}} \lambda + \mathbf{\Delta}^2 = R^2\\
 \lambda^2 - 2 \mathbf{\Delta} \cdot \mathbf{\hat{d}} \lambda
 + \mathbf{\Delta}^2 - R^2 = 0
-$$
+```
 
 So
 
-$$
+```math
 \lambda = \mathbf{\Delta} \cdot \mathbf{\hat{d}} \pm \sqrt{ (\mathbf{\Delta}
 \cdot \mathbf{\hat{d}})^2 - \mathbf{\Delta}^2 + R^2 }
-$$
+```
 
 ### Geometic interpretation
 
@@ -94,11 +95,11 @@ Now, the closest the ray is to $\mathbf{C}$ is $r$, and, since $\mathbf{\hat{d}}
 $\Delta^2 = (\mathbf{\hat{d}} \cdot \mathbf{\Delta})^2 + r^2$.  So for the ray
 to intersect the sphere we need:
 
-$$
+```math
 r^2 = \Delta^2  - (\mathbf{\hat{d}} \cdot \mathbf{\Delta})^2\\
 R^2 - r^2 \ge 0\\
 R^2 - \Delta^2  + (\mathbf{\hat{d}} \cdot \mathbf{\Delta})^2\ge 0
-$$
+```
 
 Which is the determitive of the above quadratic equation.
 
@@ -108,10 +109,10 @@ The distance between $r$ and the point of interection, $\delta$, satisfies $R^2
 = r^2+ \delta^2$, hence $\delta = \pm \sqrt{R^2 - r^2}$, and the distance
 between $\mathbf{Q}$ and the points of intersection is:
 
-$$
+```math
 \lambda = \mathbf{\hat{d}} \cdot \mathbf{\Delta} \pm \delta\\
 \lambda = \mathbf{\hat{d}} \cdot \mathbf{\Delta} \pm \sqrt{R^2 - r^2}\\
 \lambda = \mathbf{\hat{d}} \cdot \mathbf{\Delta} \pm \sqrt{R^2 - \Delta^2  + (\mathbf{\hat{d}} \cdot \mathbf{\Delta})^2}\\
-$$
+```
 
 The equation from above, but with a geometic understanding of the terms.
