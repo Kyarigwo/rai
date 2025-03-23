@@ -9,42 +9,34 @@ Camera         ← [0 0 0]
 Sf ← × 1_¯1_0 [∩÷ ImageWidth ViewPortWidth ImageHeight ViewPortHeight 0]
 Os ← × 0.5 [¯ViewPortWidth ViewPortHeight × 2 ¯FocalLength]
 
-InitialPoints ← ⊢⇡⊂1⊟
+PixelGrid ← ⊢⇡⊂1⊟
 
-A ← (
+ProcessOnePixel ← (
   - Camera +Os ×Sf +[0.5 0.5 0] ⇌
   ÷⊸⍜°√/+
   [White [0.5 0.7 1]] [¯⊸-1] ÷2+1 ⊡₁
   /+×
 )
-B ← ∵₁A InitialPoints
+OnePotato ← ∵₁ProcessOnePixel PixelGrid
 
-C ← (
-  -Camera +Os ×Sf +[0.5 0.5 0] ⇌
-  ÷¤ ⊸⍜°√/+
-  [White [0.5 0.7 1]] [¯⊸-1]÷2+1⊡₁
-  /+ ≡(≡×¤)
-  ↯ [ImageHeight ImageWidth 3]
-)
-D ← C ⍉ ♭₂ InitialPoints
-
-E ← (
-  ≡(-Camera +Os ×Sf +[0.5 0.5 0] ⇌)
-  ≡(÷⊸⍜°√/+)
-  ≡(/+× [White [0.5 0.7 1]] [¯⊸-1] ÷2+1 ⊡₁)
-  ↯ [ImageHeight ImageWidth 3])
-F ← E ♭₂ InitialPoints
-
-G ← (
+ProcessManyPixels ← (
   -Camera +Os ×Sf +[0.5 0.5 0] ⇌
   ÷¤ ⊸⍜°√/+
   [White [0.5 0.7 1]] [¯⊸-1]÷2+1⊡₁
   ≡(/+×) ¤ ⊙⍉
   ↯ [ImageHeight ImageWidth 3]
 )
-H ← G ⍉ ♭₂ InitialPoints
+Parallel ← ProcessManyPixels ⍉ ♭₂ PixelGrid
 
-⌵- now : H ImageHeight ImageWidth now
-# ⌵- now : D ImageHeight ImageWidth now
-# ⌵- now : B ImageHeight ImageWidth now
-# ⌵- now : F ImageHeight ImageWidth now
+InitialRays ← (
+  ⍉ ♭₂ PixelGrid
+  -Camera +Os ×Sf +[0.5 0.5 0] ⇌
+  ⤙÷¤ ⊸⍜°√/+
+)
+Determatives ← --⊃(⋅⋅ⁿ₂|⋅∘|ⁿ₂) ⊙⊸⊃(/+×.|/+×) ⊙˜-
+
+InitialRays ImageHeight ImageWidth
+0.5 [0 0 ¯1]
+≥0Determatives
+⨬(/+× [White [0.5 0.7 1]] [¯⊸-1] ÷2+1 ⊡₁|Red◌) ⊙⍉
+↯ [ImageHeight ImageWidth 3]
