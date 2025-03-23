@@ -56,8 +56,10 @@ $\mathbf{C}$, $(\mathbf{P} - \mathbf{C})^2 = R^2$.  Subsituting and solving for
 $\lambda$, we get:
 
 ```math
-(\mathbf{P} - \mathbf{C})^2 = R^2\\
-(\lambda \mathbf{\hat{d}} + \mathbf{Q} - \mathbf{C})^2 = R^2
+\begin{eqnarray}
+R^2 &=& (\mathbf{P} - \mathbf{C})^2 \\
+R^2 &=& (\lambda \mathbf{\hat{d}} + \mathbf{Q} - \mathbf{C})^2
+\end{eqnarray}
 ```
 
 Define:
@@ -69,12 +71,14 @@ Define:
 Then
 
 ```math
-(\lambda \mathbf{\hat{d}} + \mathbf{Q} - \mathbf{C})^2 = R^2 \\
-(\lambda \mathbf{\hat{d}} - \mathbf{\Delta})^2 = R^2\\
-(\lambda \mathbf{\hat{d}} - \mathbf{\Delta}) \cdot (\lambda \mathbf{\hat{d}} - \mathbf{\Delta}) = R^2\\
-\mathbf{\hat{d}} \cdot \mathbf{\hat{d}} \lambda^2 - 2 \mathbf{\Delta} \cdot \mathbf{\hat{d}} \lambda + \mathbf{\Delta}^2 = R^2\\
+\begin{eqnarray}
+(\lambda \mathbf{\hat{d}} + \mathbf{Q} - \mathbf{C})^2 &=& R^2 \\
+(\lambda \mathbf{\hat{d}} - \mathbf{\Delta})^2 &=& R^2\\
+(\lambda \mathbf{\hat{d}} - \mathbf{\Delta}) \cdot (\lambda \mathbf{\hat{d}} - \mathbf{\Delta}) &=& R^2\\
+\mathbf{\hat{d}} \cdot \mathbf{\hat{d}} \lambda^2 - 2 \mathbf{\Delta} \cdot \mathbf{\hat{d}} \lambda + \mathbf{\Delta}^2 &=& R^2\\
 \lambda^2 - 2 \mathbf{\Delta} \cdot \mathbf{\hat{d}} \lambda
-+ \mathbf{\Delta}^2 - R^2 = 0
++ \mathbf{\Delta}^2 - R^2 &=& 0
+\end{eqnarray}
 ```
 
 So
