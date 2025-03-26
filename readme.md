@@ -100,9 +100,11 @@ $\Delta^2 = (\mathbf{\hat{d}} \cdot \mathbf{\Delta})^2 + r^2$.  So for the ray
 to intersect the sphere we need:
 
 ```math
+\begin{eqnarray}
 r^2 = \Delta^2  - (\mathbf{\hat{d}} \cdot \mathbf{\Delta})^2\\
 R^2 - r^2 \ge 0\\
 R^2 - \Delta^2  + (\mathbf{\hat{d}} \cdot \mathbf{\Delta})^2\ge 0
+\end{eqnarray}
 ```
 
 Which is the determitive of the above quadratic equation.
@@ -114,9 +116,11 @@ The distance between $r$ and the point of interection, $\delta$, satisfies $R^2
 between $\mathbf{Q}$ and the points of intersection is:
 
 ```math
+\begin{eqnarray}
 \lambda = \mathbf{\hat{d}} \cdot \mathbf{\Delta} \pm \delta\\
 \lambda = \mathbf{\hat{d}} \cdot \mathbf{\Delta} \pm \sqrt{R^2 - r^2}\\
 \lambda = \mathbf{\hat{d}} \cdot \mathbf{\Delta} \pm \sqrt{R^2 - \Delta^2  + (\mathbf{\hat{d}} \cdot \mathbf{\Delta})^2}\\
+\end{eqnarray}
 ```
 
 The equation from above, but with a geometic understanding of the terms.
